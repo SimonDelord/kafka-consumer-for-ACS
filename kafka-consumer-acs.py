@@ -28,9 +28,8 @@ def main():
  #                                         message.value))
     try:
       kafka_message = f"""
-      Values for AAP - cluster: {message.value['alert']['clusterName']}
-      Values for AAP - namespace: {message.value['alert']['namespace']}
-      Values for AAP - deployment: {message.value['alert']['deployment']['name']}
+      Values for AAP - cluster: {message.value['alert']}
+
 
       """
       logger.info(kafka_message)
